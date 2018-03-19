@@ -6,7 +6,7 @@
 
 * Stata package Rdcont
 * Implements the approximate sign test for continuity of the running variable in the RD design
-* Bugni and Canay (2018): TITLE
+* Bugni and Canay (2018): Testing Continuity of a Density via g-order statistics in the Regression Discontinuity Design
 
 ### Authors of the paper ###
 * Federico Bugni, Duke University 
@@ -15,7 +15,6 @@
 ### Contributors of the package ###
 * Ivan A. Canay, Northwestern University
 * Joe Long, Northwestern University
-
 
 ### How do I get set up? ###
 
