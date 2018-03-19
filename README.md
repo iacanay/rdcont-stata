@@ -15,6 +15,7 @@
 ### Contributors of the package ###
 * Ivan A. Canay, Northwestern University
 * Joe Long, Northwestern University
+* Federico Bugni, Duke University 
 
 ### How do I get set up? ###
 
