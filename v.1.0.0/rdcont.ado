@@ -1,4 +1,4 @@
-*! version 1.0.0 Joe Long 22feb2018
+*! version 1.0.0 Joe Long 19mar2018
 program rdcont, rclass
 	syntax varlist [if] [in], [threshold(numlist) alpha(numlist) Qband(numlist)]
 	marksample touse
@@ -88,8 +88,8 @@ program rdcont, rclass
 
 		*Calculate q_irot 
 		loc argmax = 0
-		loc start = max(`q'-8, `q_star')
-		loc stop = `q'+8
+		loc start = max(`q'-ceil(4*ln(`q')), `q_star')
+		loc stop = `q'+ceil(4*ln(`q'))
 
 		forv Q = `start'/`stop'{
 			loc b = floor(`Q'/4) 
