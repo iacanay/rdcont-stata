@@ -1,0 +1,40 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/obivan/Dropbox/RA-Work/Joe/Rdcont-Stata/v.1.0.0/rdcont_example.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}26 Feb 2018, 17:29:19
+{txt}
+{com}. 
+. ********************************************************************************
+. //Bugni & Canay (2018) RDD Continuity test on Lee(2008)
+. ********************************************************************************
+. 
+. use table_two_final.dta, clear    //Loading data
+{txt}
+{com}. capture program drop rdcont       //Installing rdcont program
+{txt}
+{com}. 
+. 
+. //Test of continuity on the running variable
+. rdcont difdemshare if use==1
+{txt}(5,236 missing values generated)
+{bf:RDD non-randomized approximate sign test}
+Running variable: difdemshare
+Cutoff {bf:c} = {ralign 7:0}{col 19} {c |} {col 21}Left of {res}c{col 33}{txt}Right of {res}c{col 55}{txt}Number of obs = {res}      6559
+{txt}{hline 19}{c +}{hline 22}{col 55}{it:q}             = {res}{ralign 10:267}
+{txt}{ralign 18:Number of obs}{col 19} {c |} {col 21}{res}     2740{col 34}     3819
+{txt}{ralign 18:Eff. number of obs}{col 19} {c |} {col 21}{res}      130{col 34}      137
+{txt}{ralign 18:Eff. neighborhood}{col 19} {c |} {col 21}{res}   -0.022{col 34}    0.022
+{txt}{hline 19}{c +}{hline 22}
+{ralign 18: {it:p}-value}{col 19} {c |} {col 21}{res}    0.714
+{txt}
+{com}. 
+. log off 
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/obivan/Dropbox/RA-Work/Joe/Rdcont-Stata/v.1.0.0/rdcont_example.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res}26 Feb 2018, 17:29:19
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
