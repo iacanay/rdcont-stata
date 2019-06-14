@@ -1,0 +1,54 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}14 Jun 2019, 14:09:38
+{txt}
+{com}. 
+. ********************************************************************************
+. //Bugni & Canay (2018) RDD Continuity test on Lee(2008)
+. ********************************************************************************
+. 
+. use table_two_final.dta, clear    //Loading data
+{txt}
+{com}. capture program drop rdcont       //Installing rdcont program
+{txt}
+{com}. 
+. 
+. //Approximate Sign-Test | Bugni & Canay 
+. rdcont difdemshare if use==1
+{txt}(5,236 missing values generated)
+{bf:RDD non-randomized approximate sign test}
+Running variable: difdemshare
+Cutoff {bf:c} = {ralign 7:0}{col 19} {c |} {col 21}Left of {res}c{col 33}{txt}Right of {res}c{col 55}{txt}Number of obs = {res}      6559
+{txt}{hline 19}{c +}{hline 22}{col 55}{it:q}             = {res}{ralign 10:218}
+{txt}{ralign 18:Number of obs}{col 19} {c |} {col 21}{res}     2740{col 34}     3819
+{txt}{ralign 18:Eff. number of obs}{col 19} {c |} {col 21}{res}       99{col 34}      119
+{txt}{ralign 18:Eff. neighborhood}{col 19} {c |} {col 21}{res}   -0.019{col 34}    0.019
+{txt}{hline 19}{c +}{hline 22}
+{ralign 18: {it:p}-value}{col 19} {c |} {col 21}{res}    0.198
+{txt}
+{com}. return list
+
+{txt}scalars:
+                r(q_p) =  {res}223
+                 {txt}r(lb) =  {res}-.0191190242767334
+                 {txt}r(ub) =  {res}.0191540718078613
+                {txt}r(N_r) =  {res}3819
+                {txt}r(N_l) =  {res}2740
+                  {txt}r(c) =  {res}0
+                {txt}r(q_l) =  {res}99
+                {txt}r(q_r) =  {res}119
+                  {txt}r(q) =  {res}218
+                  {txt}r(N) =  {res}6559
+                  {txt}r(p) =  {res}.1980374220065977
+{txt}
+{com}. 
+. log off 
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/obivan/Documents/Software-Packages/rdcont-Stata/v.1.1.0/rdcont_example.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res}14 Jun 2019, 14:09:38
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

@@ -1,4 +1,4 @@
-*! version 1.0.0 Joe Long 19mar2018
+*! version 1.1.0 Ivan Canay 14jun2019
 program rdcont, rclass
 	syntax varlist [if] [in], [threshold(numlist) alpha(numlist) Qband(numlist)]
 	marksample touse
@@ -80,11 +80,11 @@ program rdcont, rclass
 		loc sd = r(sd)
 
 		*Calculate q_rot
-		loc normal = (`threshold' - `mu')/`sd'
-		loc C_phi = exp(-0.5*(`normal'^2))/max(1,abs(10*`normal'*exp(-0.5*(`normal'^2))))
-		loc qrot = `C_phi'*`N'/ln(`N')
+		loc C_phi = (`sd'*2*normalden(`threshold',`mu', `sd')^2/(normalden(`mu'+`sd',`mu', `sd')))^(2/3) 
+		loc qrot = `C_phi'*`N'^(0.6)
 		loc q_star = ceil(1 - ln(`alpha')/ln(2))
 		loc q = ceil(max(`q_star', `qrot'))
+		loc qpre = `q'
 
 		*Calculate q_irot 
 		loc argmax = 0
@@ -159,7 +159,7 @@ program rdcont, rclass
 	ret sca N_r = `N_r'
 	ret sca ub = `ul'
 	ret sca lb = `ll'
-	*ret sca b_q = `b_q'
+	ret sca q_p = `qpre'
 
 end
 
