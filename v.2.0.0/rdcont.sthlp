@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 1.1.0 14jun2019}{...}
+{* *! version 2.0.0 15apr2020}{...}
 {cmd:help rdcont}
 {hline}
 
@@ -25,7 +25,7 @@
 {title:Description}
 
 {pstd}
-In the regression discontinuity design it is common practice to assess the credibility of the design by testing the continuity of the density of the running variable at the cut-off. {cmd:rdcont} tests this assumption using the non-randomized approximate sign test developed in Bugni and Canay (2019). 
+In the regression discontinuity design it is common practice to assess the credibility of the design by testing the continuity of the density of the running variable at the cut-off. {cmd:rdcont} tests this assumption using the non-randomized approximate sign test developed in Bugni and Canay (2020). 
 {p_end}
 
 {marker options}
@@ -35,7 +35,7 @@ In the regression discontinuity design it is common practice to assess the credi
 
 {marker alpha}{...}
 {phang}
-{opt alpha(real)} specifies a critical value for the calculation of the data dependent rule of thumb for {it:q} proposed in Bugni and Canay (2019), referred to in the paper as q_irot (informed rule of thumb). If left unspecified, the default value is 0.05. Cannot be specified with {opt qobs}. {p_end}
+{opt alpha(real)} specifies a critical value for the calculation of the data dependent rule of thumb for {it:q} proposed in Bugni and Canay (2020), referred to in the paper as q_irot (informed rule of thumb). If left unspecified, the default value is 0.05. Cannot be specified with {opt qobs}. {p_end}
 
 {marker threshold}{...}
 {phang}
@@ -76,6 +76,6 @@ jlong@u.northwestern.edu
 {title:References}
 
 {phang}
-Bugni, Federico A. and Ivan A. Canay. (2019) "Testing Continuity of a Density via {it:g}-order 
+Bugni, Federico A. and Ivan A. Canay. (2020) "Testing Continuity of a Density via {it:g}-order 
 statistics in the Regression Discontinuity Design." 
 {p_end}

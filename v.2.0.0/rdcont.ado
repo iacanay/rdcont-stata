@@ -1,4 +1,4 @@
-*! version 1.1.0 Ivan Canay 14jun2019
+*! version 2.0.0 Ivan Canay 15apr2020
 program rdcont, rclass
 	syntax varlist [if] [in], [threshold(numlist) alpha(numlist) Qband(numlist)]
 	marksample touse
