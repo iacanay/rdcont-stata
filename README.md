@@ -1,6 +1,5 @@
 # README #
 
-[**DOWNLOAD Rdcont PACKAGE**](https://bitbucket.org/iacanay/rdcont-stata/get/HEAD.zip)
 
 ### What is this repository for? ###
 
@@ -37,11 +36,3 @@ rdcont.ado
 rdcont.hlp
 rdcont_example.do
 table_two_final.dta
-
-### LICENSE
-
-Rdcont-STATA is released under the [MIT LICENSE](https://bitbucket.org/iacanay/rdcont-stata/raw/master/LICENSE)
-
-### Changelog 
-
-A complete version history is here: [CHANGELOG](https://bitbucket.org/iacanay/rdcont-stata/wiki/Home)
